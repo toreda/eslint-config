@@ -1,0 +1,24 @@
+{
+  "name": "@toreda/eslint-config",
+  "version": "1.0.0",
+  "public": true,
+  "description": "Toreda's eslint config file for organization-wide TypeScript projects.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toreda/eslint-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "typescript",
+    "eslint-config",
+    "eslint-config-prettier"
+  ],
+  "author": "Toreda, Inc.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toreda/eslint-config/issues"
+  },
+  "homepage": "https://github.com/toreda/eslint-config#readme"
+}
