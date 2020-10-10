@@ -3,7 +3,7 @@
 
 ![Toreda](https://content.toreda.com/logo/toreda-logo.png)
 
-Toreda's official organization-wide `eslint-config` for TypeScript projects.
+Toreda's official `eslint-config` for organization-wide TypeScript projects.
 
 ## Installation
 
