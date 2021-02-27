@@ -26,5 +26,15 @@ module.exports = {
 		'@typescript-eslint/explicit-function-return-type': 'error',
 		'@typescript-eslint/ban-ts-comment': 'warn',
 		'max-len': ['warn', {'code': 110}]
-	}
+	},
+	overrides: [
+		{
+			files: ['*.spec.ts'],
+			rules: {
+				'@typescript-eslint/explicit-function-return-type': 0,
+				'@typescript-eslint/no-empty-function': 0,
+				'@typescript-eslint/no-explicit-any': 0
+			}
+		}
+	]
 };
