@@ -16,13 +16,13 @@ module.exports = {
 		"plugin:prettier/recommended",
 	],
 	rules: {
-		"@typescript-eslint/no-explicit-any": "warn",
-		"@typescript-eslint/internal/no-typescript-default-import": "off",
-		"@typescript-eslint/no-var-requires": "warn",
-		"@typescript-eslint/no-inferrable-types": "off",
-		"@typescript-eslint/no-empty-interface": "warn",
 		"@typescript-eslint/explicit-function-return-type": "error",
 		"@typescript-eslint/ban-ts-comment": "warn",
+		"@typescript-eslint/no-empty-interface": "warn",
+		"@typescript-eslint/no-explicit-any": "warn",
+		"@typescript-eslint/no-var-requires": "warn",
+		"@typescript-eslint/internal/no-typescript-default-import": "off",
+		"@typescript-eslint/no-inferrable-types": "off",
 		"max-len": ["warn", { code: 110 }],
 	},
 	overrides: [
@@ -35,6 +35,14 @@ module.exports = {
 				"@typescript-eslint/no-non-null-assertion": 0,
 			},
 		},
+		{
+			files: ['./*.ts'],
+			rules: {
+				'@typescript-eslint/explicit-function-return-type': 0,
+				'@typescript-eslint/no-explicit-any': 0,
+				'@typescript-eslint/no-var-requires': 0
+			}
+		}
 		{
 			files: ["*.js"],
 			rules: {
