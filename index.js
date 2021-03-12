@@ -13,7 +13,7 @@ module.exports = {
 		"plugin:@typescript-eslint/recommended",
 		// plugin-prettier and eslint-config-prettier. This will display prettier
 		// errors as ESLint errors. Make sure this is always the last configuration in the extends array.
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
 	],
 	rules: {
 		"@typescript-eslint/explicit-function-return-type": "error",
@@ -23,7 +23,7 @@ module.exports = {
 		"@typescript-eslint/no-var-requires": "warn",
 		"@typescript-eslint/internal/no-typescript-default-import": "off",
 		"@typescript-eslint/no-inferrable-types": "off",
-		"max-len": ["warn", { code: 110 }]
+		"max-len": ["warn", { code: 110 }],
 	},
 	overrides: [
 		{
@@ -32,7 +32,8 @@ module.exports = {
 				"@typescript-eslint/explicit-function-return-type": 0,
 				"@typescript-eslint/no-empty-function": 0,
 				"@typescript-eslint/no-explicit-any": 0,
-				"@typescript-eslint/no-non-null-assertion": 0
+				"@typescript-eslint/no-non-null-assertion": 0,
+				'max-len': 0,
 			},
 		},
 		{
@@ -40,15 +41,15 @@ module.exports = {
 			rules: {
 				'@typescript-eslint/explicit-function-return-type': 0,
 				'@typescript-eslint/no-explicit-any': 0,
-				'@typescript-eslint/no-var-requires': 0
-			}
+				'@typescript-eslint/no-var-requires': 0,
+			},
 		},
 		{
 			files: ["*.js"],
 			rules: {
 				"@typescript-eslint/explicit-function-return-type": 0,
-				"@typescript-eslint/no-var-requires": 0
+				"@typescript-eslint/no-var-requires": 0,
 			},
-		}
-	]
+		},
+	],
 };
