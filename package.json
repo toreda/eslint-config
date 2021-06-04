@@ -1,6 +1,6 @@
 {
 	"name": "@toreda/eslint-config",
-	"version": "2.1.0",
+	"version": "2.2.0",
 	"public": true,
 	"description": "Toreda's eslint config file for organization-wide TypeScript projects.",
 	"main": "index.js",
