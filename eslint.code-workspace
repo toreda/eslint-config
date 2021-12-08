@@ -3,5 +3,15 @@
 		{
 			"path": "."
 		}
-	]
+	],
+	"extensions": {
+		"recommendations": [
+			"aaron-bond.better-comments",
+			"dbaeumer.vscode-eslint",
+			"eg2.vscode-npm-script",
+			"esbenp.prettier-vscode",
+			"yzhang.markdown-all-in-one",
+			"sonarsource.sonarlint-vscode"
+		]
+	}
 }

@@ -13,7 +13,8 @@
 		"eslint",
 		"typescript",
 		"eslint-config",
-		"eslint-config-prettier"
+		"eslint-config-prettier",
+		"toreda"
 	],
 	"author": "Toreda, Inc.",
 	"license": "MIT",
