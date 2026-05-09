@@ -1,23 +1,10 @@
 const tseslint = require('typescript-eslint');
-const tsParser = require('@typescript-eslint/parser');
-const tsPlugin = require('@typescript-eslint/eslint-plugin');
 const prettierRecommended = require('eslint-plugin-prettier/recommended');
 
 module.exports = [
 	...tseslint.configs.recommended,
 	prettierRecommended,
 	{
-		languageOptions: {
-			parser: tsParser,
-			ecmaVersion: 2020,
-			sourceType: 'module',
-			parserOptions: {
-				ecmaFeatures: {},
-			},
-		},
-		plugins: {
-			'@typescript-eslint': tsPlugin,
-		},
 		rules: {
 			'@typescript-eslint/ban-ts-comment': 'warn',
 			'@typescript-eslint/explicit-function-return-type': 'error',
