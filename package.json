@@ -1,9 +1,20 @@
 {
 	"name": "@toreda/eslint-config",
-	"version": "2.2.0",
-	"public": true,
-	"description": "Toreda's eslint config file for organization-wide TypeScript projects.",
+	"version": "3.0.0",
+	"description": "Toreda's shareable ESLint flat config for TypeScript and Prettier. Requires ESLint 9+.",
 	"main": "index.js",
+	"files": [
+		"index.js",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
+	"engines": {
+		"node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {},
 	"repository": {
 		"type": "git",
@@ -11,10 +22,13 @@
 	},
 	"keywords": [
 		"eslint",
-		"eslint config",
-		"typescript",
 		"eslint-config",
-		"eslint-config-prettier",
+		"eslint9",
+		"flat-config",
+		"typescript",
+		"typescript-eslint",
+		"prettier",
+		"shareable-config",
 		"toreda"
 	],
 	"author": "Toreda, Inc.",
@@ -22,5 +36,14 @@
 	"bugs": {
 		"url": "https://github.com/toreda/eslint-config/issues"
 	},
-	"homepage": "https://github.com/toreda/eslint-config#readme"
+	"homepage": "https://github.com/toreda/eslint-config#readme",
+	"peerDependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.0.0",
+		"@typescript-eslint/parser": "^8.0.0",
+		"eslint": "^9.0.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"prettier": "^3.0.0",
+		"typescript-eslint": "^8.0.0"
+	}
 }

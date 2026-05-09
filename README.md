@@ -10,10 +10,10 @@ Toreda's official `eslint-config` for organization-wide TypeScript projects.
 
 # Installation
 
-## Install with yarn
+## Install with `pnpm`
 
 ```bash
-$ yarn add @toreda/eslint-config --dev
+$ `pnpm` add @toreda/eslint-config --D
 ```
 
 ## Install with npm
@@ -27,18 +27,22 @@ $ npm add @toreda/eslint-config --save-dev
 
 ## Using the config
 
-After `@toreda/eslint-config` has been added to project dependencies you'll need to open `.eslintrc.js` in your project's root folder.
+After `@toreda/eslint-config` has been added to project dependencies, create (or open) `eslint.config.js` in your project's root folder.
 
-**Add `@toreda/eslint-config` to extends:**
+**Spread `@toreda/eslint-config` into your flat config array:**
 
 ```javascript
-module.exports = {
-  extends: [
-    "@toreda/eslint-config"
-  ],
-  rules: {}
-};
+const toredaConfig = require('@toreda/eslint-config');
+
+module.exports = [
+  ...toredaConfig,
+  {
+    rules: {}
+  }
+];
 ```
+
+> Requires ESLint 9 or newer. For ESLint 8 and earlier, use `@toreda/eslint-config@2.x`.
 
 &nbsp;
 
@@ -56,6 +60,6 @@ See [eslint.org's shareable configs page](https://eslint.org/docs/developer-guid
 
 
 ## Copyright
-Copyright &copy; 2019 - 2021 Toreda, Inc. All Rights Reserved.
+Copyright &copy; 2019 - 2026 Toreda, Inc. All Rights Reserved.
 
 https://www.toreda.com

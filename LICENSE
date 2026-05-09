@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2010 - 2021 Toreda, Inc.
+Copyright (c) 2019 - 2026 Toreda, Inc.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
