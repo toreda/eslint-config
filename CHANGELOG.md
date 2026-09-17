@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2026-09-16
+
+### Changed
+- **BREAKING:** Requires ESLint 10+. Peer dependency on `eslint` raised to `^10.0.0`. For ESLint 9, use `3.1.x`.
+- **BREAKING:** Requires Node.js `^20.19.0 || ^22.13.0 || >=24`, matching ESLint 10's supported range.
+- Peer dependency on `typescript-eslint` raised to `^8.56.0`, the first release that declares ESLint 10 support.
+- Peer dependencies raised to `eslint-config-prettier >=10.1.0`, `eslint-plugin-prettier ^5.5.6`, and `prettier ^3.8.0`.
+- Replaced deprecated `@typescript-eslint/no-empty-interface` (removed in typescript-eslint v9) with its successor `@typescript-eslint/no-empty-object-type` at `warn`. Previously both rules fired on an empty interface, producing an error and a warning; empty object types now produce a single warning.
+
+### Removed
+- `@typescript-eslint/internal/no-typescript-default-import` rule entry. It belongs to typescript-eslint's private internal plugin and was never available to consumers.
+- Support for ESLint 9.
+
+## [3.1.0] - 2026-05-09
+
+### Changed
+- `index.js` now relies on `typescript-eslint`'s bundled parser and plugin registration instead of importing `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin` directly. Explicit `languageOptions` and `plugins` blocks were removed.
+- `package.json` cleanup: reformatted, added `sideEffects: false`, removed empty `scripts`, and simplified the Node engine range.
+
+### Removed
+- Peer dependencies on `@typescript-eslint/eslint-plugin` and `@typescript-eslint/parser`. They are provided transitively by `typescript-eslint`.
+
 ## [3.0.0] - 2026-05-09
 
 ### Changed
@@ -45,6 +67,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Removed trailing commas from configuration.
 - Loosened typing rules inside Jest test files; additional exceptions inside tests.
 
+## [1.0.1]
+
+### Changed
+- Version bump for republish. No configuration changes.
+
 ## [1.0.0]
 
 ### Added
@@ -52,9 +79,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - TypeScript parsing via `@typescript-eslint/parser`.
 - Extends `plugin:@typescript-eslint/recommended` and `plugin:prettier/recommended`.
 
-[Unreleased]: https://github.com/toreda/eslint-config/compare/v3.0.0...HEAD
-[3.0.0]: https://github.com/toreda/eslint-config/compare/v2.2.0...v3.0.0
-[2.2.0]: https://github.com/toreda/eslint-config/compare/v2.1.0...v2.2.0
-[2.1.0]: https://github.com/toreda/eslint-config/compare/v2.0.0...v2.1.0
-[2.0.0]: https://github.com/toreda/eslint-config/compare/v1.0.0...v2.0.0
-[1.0.0]: https://github.com/toreda/eslint-config/releases/tag/v1.0.0
+[Unreleased]: https://github.com/toreda/eslint-config/compare/v3.2.0...HEAD
+[3.2.0]: https://github.com/toreda/eslint-config/compare/v3.1.0...v3.2.0
+[3.1.0]: https://github.com/toreda/eslint-config/compare/v3.0.0...v3.1.0
+[3.0.0]: https://github.com/toreda/eslint-config/compare/8010ece...v3.0.0
+[2.2.0]: https://github.com/toreda/eslint-config/compare/599e7e2...8010ece
+[2.1.0]: https://github.com/toreda/eslint-config/compare/f1d23f6...599e7e2
+[2.0.0]: https://github.com/toreda/eslint-config/compare/683d042...f1d23f6
+[1.0.1]: https://github.com/toreda/eslint-config/compare/0637971...683d042
+[1.0.0]: https://github.com/toreda/eslint-config/commit/0637971

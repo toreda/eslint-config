@@ -13,7 +13,7 @@ Toreda's official `eslint-config` for organization-wide TypeScript projects.
 ## Install with `pnpm`
 
 ```bash
-$ `pnpm` add @toreda/eslint-config --D
+$ pnpm add @toreda/eslint-config -D
 ```
 
 ## Install with npm
@@ -42,7 +42,7 @@ module.exports = [
 ];
 ```
 
-> Requires ESLint 9 or newer. For ESLint 8 and earlier, use `@toreda/eslint-config@2.x`.
+> Requires ESLint 10 or newer. For ESLint 9, use `@toreda/eslint-config@3.1.x`. For ESLint 8 and earlier, use `@toreda/eslint-config@2.x`.
 
 &nbsp;
 
