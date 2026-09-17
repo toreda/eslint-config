@@ -1,10 +1,12 @@
 const tseslint = require('typescript-eslint');
 const prettierRecommended = require('eslint-plugin-prettier/recommended');
+const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
 	...tseslint.configs.recommended,
 	prettierRecommended,
 	{
+		plugins: {'@stylistic': stylistic},
 		rules: {
 			'@typescript-eslint/ban-ts-comment': 'warn',
 			'@typescript-eslint/explicit-function-return-type': 'error',
@@ -18,7 +20,7 @@ module.exports = [
 			],
 			'@typescript-eslint/no-require-imports': 'warn',
 			'@typescript-eslint/prefer-namespace-keyword': 'error',
-			'max-len': [
+			'@stylistic/max-len': [
 				'warn',
 				{
 					code: 110,
@@ -36,7 +38,7 @@ module.exports = [
 			'@typescript-eslint/no-empty-function': 'off',
 			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/no-non-null-assertion': 'off',
-			'max-len': 'off',
+			'@stylistic/max-len': 'off',
 		},
 	},
 	{
